@@ -1184,14 +1184,8 @@ export default {
         if (param.get("dev_id")) {
           this.form.devid = param.get("dev_id");
         }
-        if (param.get("append_type")) {
-          this.form.appendType = param.get("append_type") === 'true';
-        }
         if (param.get("tls13")) {
-          this.form.tls13 = param.get("tls13");
-        }
-        if (param.get("xudp")) {
-          this.form.xudp = param.get("xudp") === 'true';
+          this.form.tls13 = param.get("tls13") === 'true';
         }
         if (param.get("sort")) {
           this.form.sort = param.get("sort") === 'true';
