@@ -1086,7 +1086,7 @@ export default {
       data.append("config", encodeURIComponent(this.uploadConfig));
       this.$axios
         .post(configUploadBackend, data, {
-          header: {
+          headers: {
             "Content-Type": "application/form-data; charset=utf-8"
           }
         })
