@@ -960,7 +960,7 @@ export default {
         this.$message.error("订阅链接与客户端为必填项");
         return false;
       }
-      let backend = window.location.origin;
+      let backend = this.form.customBackend || window.location.origin;
       let sourceSub = obfuscateSub(this.form.sourceSubUrl);
       sourceSub = sourceSub.replace(/(\n|\r|\n\r)/g, "|");
       this.customSubUrl =
