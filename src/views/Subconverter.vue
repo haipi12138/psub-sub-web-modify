@@ -1054,7 +1054,7 @@ export default {
           : this.form.shortType;
       this.loading1 = true;
       let data = new FormData();
-      data.append("longUrl", btoa(this.customSubUrl));
+      data.append("longUrl", btoa(unescape(encodeURIComponent(this.customSubUrl))));
       if (this.customShortSubUrl.trim() != "") {
         data.append("shortKey", this.customShortSubUrl.trim().indexOf("http") < 0 ? this.customShortSubUrl.trim() : "");
       }
