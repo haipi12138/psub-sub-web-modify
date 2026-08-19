@@ -962,7 +962,7 @@ export default {
       }
       let backend = this.form.customBackend || window.location.origin;
       let sourceSub = obfuscateSub(this.form.sourceSubUrl);
-      sourceSub = sourceSub.replace(/(\n|\r|\n\r)/g, "|");
+      sourceSub = sourceSub.replace(/(\r\n|\r|\n)/g, "|");
       this.customSubUrl =
         backend +
         "/sub?target=" +
