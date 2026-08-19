@@ -1137,7 +1137,9 @@ export default {
       (async () => {
         let url
         try {
-          url = new URL(await this.analyzeUrl())
+          let resUrl = await this.analyzeUrl();
+          if (!resUrl) return; // 如果短链解析失败（返回为空），直接终止，不再弹出二次报错
+          url = new URL(resUrl);
         } catch (error) {
           this.$message.error("请输入正确的订阅地址!");
           return;
