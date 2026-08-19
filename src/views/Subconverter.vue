@@ -298,6 +298,7 @@
   </div>
 </template>
 <script>
+const obfuscateSub = (url) => url;
 const project = process.env.VUE_APP_PROJECT
 const configScriptBackend = process.env.VUE_APP_CONFIG_UPLOAD_BACKEND + '/api.php'
 const remoteConfigSample = process.env.VUE_APP_SUBCONVERTER_REMOTE_CONFIG
