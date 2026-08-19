@@ -1060,7 +1060,7 @@ export default {
       }
       this.$axios
         .post(duan, data, {
-          header: {
+          headers: {
             "Content-Type": "application/form-data; charset=utf-8"
           }
         })
