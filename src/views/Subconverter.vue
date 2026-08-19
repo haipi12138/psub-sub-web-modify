@@ -1266,7 +1266,7 @@ export default {
       data.append("filterscript", encodeURIComponent(this.uploadFilter));
       this.$axios
         .post(configScriptBackend, data, {
-          header: {
+          headers: {
             "Content-Type": "application/form-data; charset=utf-8"
           }
         })
